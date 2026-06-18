@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ministry Opportunities</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container">
+        <h1>Ministry Opportunities</h1>
+        <p>Here are some opportunities to serve in different places and ways.</p>
+      </div>
+    </header>
+
+    <main class="container">
+      <section class="filters" aria-label="Opportunity filters">
+        <label>
+          Location
+          <select id="locationFilter">
+            <option value="All">All</option>
+          </select>
+        </label>
+
+        <label>
+          Skill Area
+          <select id="skillFilter">
+            <option value="All">All</option>
+          </select>
+        </label>
+
+        <label>
+          Type
+          <select id="typeFilter">
+            <option value="All">All</option>
+          </select>
+        </label>
+      </section>
+
+      <section id="opportunityList" class="card-grid" aria-live="polite"></section>
+    </main>
+
+    <footer class="contact-section">
+      <div class="container">
+        <p>Contact us if you want to learn more.</p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,134 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  color: #222;
+  background: #f5f5f2;
+  line-height: 1.5;
+}
+
+.container {
+  width: min(100% - 32px, 960px);
+  margin: 0 auto;
+}
+
+.site-header {
+  padding: 36px 0 24px;
+  background: #e8efe6;
+  border-bottom: 1px solid #d5ddd1;
+}
+
+h1 {
+  margin: 0 0 8px;
+  font-size: 2rem;
+}
+
+.site-header p {
+  margin: 0;
+  max-width: 620px;
+}
+
+.filters {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin: 24px 0;
+  padding: 16px;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+}
+
+label {
+  display: grid;
+  gap: 6px;
+  font-weight: bold;
+  font-size: 0.95rem;
+}
+
+select {
+  width: 100%;
+  padding: 9px;
+  font: inherit;
+  border: 1px solid #bbb;
+  border-radius: 4px;
+  background: #fff;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  margin-bottom: 32px;
+}
+
+.card {
+  padding: 18px;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+}
+
+.card h2 {
+  margin: 0 0 10px;
+  font-size: 1.25rem;
+}
+
+.card p {
+  margin: 8px 0;
+}
+
+.meta {
+  color: #555;
+  font-size: 0.95rem;
+}
+
+button {
+  margin-top: 12px;
+  padding: 9px 14px;
+  font: inherit;
+  color: #fff;
+  background: #35644f;
+  border: 0;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #284c3c;
+}
+
+.empty-message {
+  padding: 18px;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+}
+
+.contact-section {
+  padding: 22px 0;
+  background: #e8efe6;
+  border-top: 1px solid #d5ddd1;
+}
+
+.contact-section p {
+  margin: 0;
+}
+
+@media (max-width: 700px) {
+  .filters,
+  .card-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .site-header {
+    padding-top: 28px;
+  }
+
+  h1 {
+    font-size: 1.7rem;
+  }
+}
