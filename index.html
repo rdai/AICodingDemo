@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Ministry Opportunities</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <main class="page">
+      <header class="intro">
+        <p class="eyebrow">Southeast Asia Missions</p>
+        <h1>Ministry Opportunities</h1>
+        <p>Here are some opportunities to serve in different places and ways.</p>
+      </header>
+
+      <section class="tools" aria-label="Search and filter opportunities">
+        <label class="search-label" for="search">Search opportunities</label>
+        <input id="search" type="search" placeholder="Search by country, skill, or ministry">
+
+        <div class="filters" aria-label="Filter by category">
+          <button class="filter filter-all is-active" type="button" data-category="All">All</button>
+          <button class="filter filter-community" type="button" data-category="Community">Community</button>
+          <button class="filter filter-education" type="button" data-category="Education">Education</button>
+          <button class="filter filter-medical" type="button" data-category="Medical">Medical</button>
+          <button class="filter filter-media" type="button" data-category="Media">Media</button>
+          <button class="filter filter-prayer" type="button" data-category="Prayer">Prayer</button>
+        </div>
+      </section>
+
+      <section id="opportunities" class="opportunities" aria-label="Sample ministry opportunities"></section>
+      <p class="empty" hidden>No opportunities match that search or category.</p>
+
+      <section class="prayer-resources" aria-labelledby="prayer-title">
+        <h2 id="prayer-title">Prayer Resources</h2>
+        <div class="resource-grid">
+          <article>
+            <h3>Prayer Guide</h3>
+            <p>Pray for open doors, wise partnerships, language learning, and lasting fruit across Southeast Asia.</p>
+          </article>
+          <article>
+            <h3>Weekly Focus</h3>
+            <p>Choose one country each week and pray for local believers, workers, families, and unreached communities.</p>
+          </article>
+          <article>
+            <h3>Team Care</h3>
+            <p>Pray for health, humility, unity, courage, and encouragement for people serving cross-culturally.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="contact" aria-labelledby="contact-title">
+        <h2 id="contact-title">Contact Us</h2>
+        <p>Use this sample form to ask about an opportunity or share how you may want to serve.</p>
+        <form id="contact-form">
+          <div class="form-row">
+            <label for="name">Name</label>
+            <input id="name" name="name" type="text" autocomplete="name" required>
+          </div>
+          <div class="form-row">
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" autocomplete="email" required>
+          </div>
+          <div class="form-row">
+            <label for="interest">Opportunity reference</label>
+            <input id="interest" name="interest" type="text" placeholder="Example: SEA-004">
+          </div>
+          <div class="form-row">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+          </div>
+          <button class="submit-button" type="submit">Send message</button>
+          <p id="form-status" class="form-status" role="status"></p>
+        </form>
+      </section>
+    </main>
+
+    <script src="opportunities.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>

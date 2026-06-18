@@ -1,0 +1,409 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #111827;
+  background: #eef4f1;
+  line-height: 1.5;
+}
+
+.page {
+  width: min(100% - 32px, 1120px);
+  margin: 0 auto;
+  padding: 48px 0;
+}
+
+.intro {
+  margin-bottom: 28px;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin-top: 0;
+}
+
+.eyebrow {
+  margin-bottom: 8px;
+  color: #07543f;
+  font-size: 0.85rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+h1 {
+  margin-bottom: 10px;
+  color: #0f172a;
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  line-height: 1.1;
+}
+
+.intro p:last-child,
+.contact > p {
+  max-width: 640px;
+  color: #334155;
+  font-size: 1.1rem;
+}
+
+.tools {
+  display: grid;
+  gap: 14px;
+  margin-bottom: 24px;
+  padding: 18px;
+  border: 1px solid #9db2a8;
+  border-radius: 8px;
+  background: #ffffff;
+}
+
+.search-label,
+.form-row label {
+  color: #0f172a;
+  font-weight: 800;
+}
+
+input[type="search"],
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%;
+  min-height: 46px;
+  padding: 10px 14px;
+  border: 2px solid #52635b;
+  border-radius: 8px;
+  color: #111827;
+  background: #ffffff;
+  font: inherit;
+}
+
+textarea {
+  resize: vertical;
+}
+
+input:focus,
+textarea:focus {
+  outline: 4px solid #facc15;
+  outline-offset: 2px;
+}
+
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.filter {
+  min-height: 40px;
+  padding: 8px 13px;
+  border: 2px solid transparent;
+  border-radius: 999px;
+  color: #ffffff;
+  cursor: pointer;
+  font: inherit;
+  font-weight: 800;
+}
+
+.filter:hover,
+.filter.is-active {
+  border-color: #111827;
+  box-shadow: 0 0 0 3px #facc15;
+}
+
+.filter-all {
+  background: #334155;
+}
+
+.filter-community {
+  background: #0f766e;
+}
+
+.filter-education {
+  background: #1d4ed8;
+}
+
+.filter-medical {
+  background: #b91c1c;
+}
+
+.filter-media {
+  background: #7c2d12;
+}
+
+.filter-prayer {
+  background: #6d28d9;
+}
+
+.opportunities {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  overflow: hidden;
+  border: 2px solid #334155;
+  border-radius: 8px;
+  color: inherit;
+  background: #ffffff;
+  text-decoration: none;
+  box-shadow: 0 6px 14px rgba(15, 23, 42, 0.12);
+  transition: transform 160ms ease, box-shadow 160ms ease;
+}
+
+.card:hover,
+.card:focus-visible {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 22px rgba(15, 23, 42, 0.2);
+}
+
+.card:focus-visible {
+  outline: 4px solid #facc15;
+  outline-offset: 4px;
+}
+
+.card[hidden] {
+  display: none;
+}
+
+.card img {
+  width: 100%;
+  height: 170px;
+  object-fit: cover;
+  background: #cbd5e1;
+}
+
+.card-body {
+  padding: 18px;
+}
+
+.card-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.ref {
+  color: #111827;
+  font-size: 0.82rem;
+  font-weight: 900;
+}
+
+.category {
+  display: inline-block;
+  padding: 4px 8px;
+  border-radius: 999px;
+  color: #ffffff;
+  font-size: 0.78rem;
+  font-weight: 800;
+}
+
+.category-community {
+  background: #0f766e;
+}
+
+.category-education {
+  background: #1d4ed8;
+}
+
+.category-medical {
+  background: #b91c1c;
+}
+
+.category-media {
+  background: #7c2d12;
+}
+
+.category-prayer {
+  background: #6d28d9;
+}
+
+.card h2 {
+  margin-bottom: 8px;
+  color: #064e3b;
+  font-size: 1.35rem;
+  text-decoration: underline;
+  text-decoration-thickness: 3px;
+  text-underline-offset: 4px;
+}
+
+.card p {
+  color: #263241;
+}
+
+dl {
+  display: grid;
+  gap: 10px;
+  margin: 18px 0 0;
+}
+
+dl div {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  padding-top: 10px;
+  border-top: 1px solid #cbd5d0;
+}
+
+dt {
+  color: #334155;
+  font-weight: 800;
+}
+
+dd {
+  margin: 0;
+  color: #111827;
+  text-align: right;
+}
+
+.empty {
+  margin: 24px 0 0;
+  padding: 16px;
+  border: 2px solid #334155;
+  border-radius: 8px;
+  background: #ffffff;
+  color: #334155;
+  font-weight: 700;
+}
+
+.prayer-resources,
+.contact {
+  margin-top: 44px;
+  padding-top: 28px;
+  border-top: 2px solid #9db2a8;
+}
+
+.prayer-resources h2,
+.contact h2 {
+  margin-bottom: 14px;
+  color: #0f172a;
+}
+
+.resource-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+}
+
+.resource-grid article {
+  padding: 18px;
+  border: 2px solid #334155;
+  border-radius: 8px;
+  background: #ffffff;
+}
+
+.resource-grid h3 {
+  margin-bottom: 8px;
+  color: #064e3b;
+  font-size: 1.05rem;
+}
+
+.resource-grid p {
+  margin-bottom: 0;
+  color: #263241;
+}
+
+form {
+  display: grid;
+  gap: 14px;
+  max-width: 720px;
+  padding: 20px;
+  border: 2px solid #334155;
+  border-radius: 8px;
+  background: #ffffff;
+}
+
+.form-row {
+  display: grid;
+  gap: 6px;
+}
+
+.submit-button {
+  width: fit-content;
+  min-height: 44px;
+  padding: 10px 16px;
+  border: 2px solid #06281f;
+  border-radius: 8px;
+  color: #ffffff;
+  background: #07543f;
+  cursor: pointer;
+  font: inherit;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.submit-button:hover,
+.submit-button:focus-visible {
+  background: #0f766e;
+}
+
+.form-status {
+  margin: 0;
+  color: #07543f;
+  font-weight: 800;
+}
+
+.back-link {
+  display: inline-block;
+  margin-bottom: 18px;
+  color: #07543f;
+  font-weight: 800;
+}
+
+.detail-card {
+  overflow: hidden;
+  border: 2px solid #334155;
+  border-radius: 8px;
+  background: #ffffff;
+  box-shadow: 0 6px 14px rgba(15, 23, 42, 0.12);
+}
+
+.detail-image {
+  width: 100%;
+  max-height: 430px;
+  object-fit: cover;
+  background: #cbd5e1;
+}
+
+.detail-content {
+  padding: 24px;
+}
+
+.lead {
+  color: #263241;
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.detail-list {
+  max-width: 560px;
+  margin-bottom: 24px;
+}
+
+.inline-button {
+  display: inline-flex;
+  align-items: center;
+}
+
+@media (max-width: 640px) {
+  .page {
+    width: min(100% - 24px, 1120px);
+    padding: 32px 0;
+  }
+
+  .card-meta,
+  dl div {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  dd {
+    text-align: left;
+  }
+}
